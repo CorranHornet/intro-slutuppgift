@@ -3,7 +3,7 @@ name: Ensure Required Files Exist
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   check-files:
@@ -15,7 +15,7 @@ jobs:
       - name: Check for required files
         run: |
           missing=0
-          for file in reflektion.txt frågor.txt; do
+          for file in reflektion.txt frÃ¥gor.txt; do
             if [ ! -f "$file" ]; then
               echo "? Missing required file: $file"
               missing=1
